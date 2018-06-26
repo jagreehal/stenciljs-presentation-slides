@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Stencil - @jagreehal</title>
+
+  <meta name="description" content="Stencil presentation slides - @jagreehal">
+  <meta name="author" content="Jag Reehal">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/reveal.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/code.css">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body class="bgx-black-60">
+
+  <div class="reveal">
+    <div class="about-me">@jagreehal</div>
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section class="justify-center">
+        <h1>Stencil JS</h1>
+        <p>
+          <h4 class="f5 lh-copy strike">The end of the framework wars?</h4>
+          <h4 class="f5 lh-copy">Build components not walls</h4>
+        </p>
+      </section>
+
+      <section class="justify-center">
+        <h1>A confession</h1>
+      </section>
+
+      <section>
+        <h2>💔 web components</h2>
+        <ul>
+          <li>Started contract in May 2017</li>
+          <li>They used Polymer</li>
+          <li>Horrible dev experience</li>
+          <li>Web Component Polyfill (anything but light)</li>
+          <li>I tried creating work arounds</li>
+          <li class="fragment">Left contract in May 2017</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📅 Jan 2018</h2>
+        <ul>
+          <li>Started new contract</li>
+        </ul>
+        <blockquote class="fragment i hot-pink">"We want you to build web components"</blockquote>
+      </section>
+
+      <section>
+        <h2>🔥 the situation</h2>
+        <ul>
+          <li>Global tech company with over 6000 employees</li>
+          <li>Legacy and greenfield web projects</li>
+          <li>Lots of different JS and CSS libraries and frameworks</li>
+          <li>Very little reuse or consistency</li>
+          <li>Difficult to make things work together</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>❤️ web components</h2>
+        <ul>
+          <li>Work
+            <span class="hot-pink">WITH</span> other JS libraries and frameworks</li>
+          <li>Shadow Dom offers guarantees</li>
+          <li>Consistent, performant user experience</li>
+          <li>CSS variables allow customisation & Themes</li>
+          <li>Slots for user content</li>
+          <li>So good...</li>
+        </ul>
+      </section>
+
+      <section class="justify-center">
+        <blockquote>
+          We created for design system using web components!
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>
+          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Stencil</h2>
+        <ul>
+          <li>Developed by the Ionic team</li>
+          <li>Compiler with minimal framework</li>
+          <li>Two outputs - components and PWA</li>
+          <li>Small API</li>
+          <li>Works with IE11!</li>
+          <li>Great community on Slack</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>
+          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Stencil</h2>
+        <ul>
+          <li> Mix of Angular, React and Vue
+            <div class="flex mt4 w-100 ">
+              <ul class="w-50 ">
+                <li>JSX</li>
+                <li>Virtual DOM</li>
+                <li>Reactive</li>
+                <li>Typescript</li>
+                <li>Decorators</li>
+              </ul>
+              <ul class="w-50 ">
+                <li>Life cycle hooks</li>
+                <li>Context</li>
+                <li>Async rendering</li>
+                <li>Snapshot testing</li>
+                <li>ES6 modules</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <section>
+          <h2>
+            <img class=" v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Building Components</h2>
+          <div>I've created a 12 step tutorial of how to create a Stencil component from scratch</div>
+          <img class="mw7 ma3 center" src="images/alert-component.png" alt="alert-component" />
+          <a href="https://github.com/jagreehal/jag-reehal-stencil-tutorial">Stencil Tutorial created by Jag Reehal</a>
+        </section>
+        <section>
+          <h2>
+            🏁 Getting started</h2>
+          <pre class="ma0 pa0">
+            <code>
+              npm init stencil
+            </code>            
+          </pre>
+          <img class="mw7 center" src="images/init.gif" alt="npm init stencil" />
+        </section>
+        <section>
+          <h2>📋 Minimal dependencies</h2>
+          <pre class="w-50 center">
+            <code>
+              ...
+              "dependencies": {},
+              "devDependencies": {
+                "@stencil/core": "^0.9.11",
+                "@types/jest": "^23.1.1",
+                "jest": "^23.2.0"
+              }
+              ...
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>📋 Component Metadata</h2>
+          <pre class="center w-90">
+              <code>
+                  import { Component, Prop } from '@stencil/core';
+
+                  @Component({
+                    tag: 'my-first-component',
+                    styleUrl: 'my-first-component.scss'
+                  })
+                  export class MyComponent {
+                  
+                    // Indicate that name should be a public property on the component
+                    @Prop() name: string;
+                  
+                    render() {
+                      return (
+                        <p>
+                          My name is {this.name}
+                        </p>
+                      );
+                    }
+                  }
+              </code>
+            </pre>
+        </section>
+        <section>
+          <h2>
+            🌈 CSS variables and themes</h2>
+          <div class="flex center">
+            <pre class="w-60 mr5">
+            <code>
+  .current {
+    margin: 0 20px;
+    font-size: 5rem;
+    color: var(--current-color, red);
+  }
+
+  button {
+    background: #333;
+    border: 0;
+    color: #fff;
+    font-family: inherit;
+    font-size: 2rem;
+  }
+
+  :host(.light) button {
+    background: #eee;
+    border: 1px solid #eee;
+    color: #222;
+} 
+            </code>
+          </pre>
+            <img class="mw6 mt3" src="images/theme-example.png " alt="theme example " />
+          </div>
+        </section>
+        <section>
+          <h2>
+            🔨 Testing</h2>
+          <pre class="w-90 center">
+            <code>
+              describe('rendering', () => {
+                let element;
+                let window;
+            
+                beforeEach(async () => {
+                  window = new TestWindow();
+                  element = await window.load({
+                    components: [AlertComponentStart],
+                    html: '<alert-component-start></alert-component-start>'
+                  });
+                });
+            
+                it('should be able to render the component with default value', async () => {
+                  expect(element.querySelector('.current').textContent).toEqual('5');
+                });
+              });
+            </code>
+          </pre>
+        </section>
+      </section>
+
+      <section>
+        <h2>
+          😕 So what?</h2>
+        <ul>
+          <li>Polymer, Skate, Vue, Svelte and others can do the same thing</li>
+          <li>Except they don't... IE11, size, testing, performance, config, dependencies...</li>
+          <li>...and rely on
+            <span class="yellow ">that</span> polyfill</li>
+        </ul>
+      </section>
+
+      <section>
+        <section class="justify-center ">
+          <h1>Stencil in one gif...</h1>
+        </section>
+
+        <section class="justify-center ">
+          <iframe src="https://giphy.com/embed/kUkCMSni7NBoQ " width="100% " height="100% " style="position:absolute
+                  " frameBorder="0 " class="giphy-embed " allowFullScreen></iframe>
+          <p>
+            <a href="https://giphy.com/gifs/kUkCMSni7NBoQ ">via GIPHY</a>
+          </p>
+        </section>
+        <section>
+          <h2>
+            🎁 what you get out of the box</h2>
+          <ul>
+            <li>Pre-rendered components</li>
+            <li>Auto generated component docs</li>
+            <li>Server Side Rendering</li>
+            <li>Plugins - official router, Sass, PostCSS</li>
+            <li>
+              and...</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>
+            🏥 Dynamic polyfills</h2>
+          <div class="flex flex-column center ">
+            <div>Chrome - smaller ployfill + ES6 modules</div>
+            <img class="w-50 center" src="images/chrome-loading.png " />
+            <div class="mt5 ">Firefox - larger polyfill + ES5 </div>
+            <img class="w-50 center" src="images/firefox-loading.png " />
+          </div>
+        </section>
+
+        <section>
+          <h2>
+            🏭 Bundling</h2>
+          <div>
+            <img class="w-50" src="images/bundling.png " />
+            <pre class="w-50 center">
+            <code>
+              <big-box>
+                <little-box></little-box>
+              </big-box>
+            </code>
+          </pre>
+
+          </div>
+          <p>Two components bundled in the same file thanks to compilation</p>
+        </section>
+      </section>
+
+      <section>
+        <h2>
+          💬 Custom Events</h2>
+        <div class="flex ">
+          <div class="w-100 flex justify-center items-center ">
+            <img class="v-top " src="images/html5.png " style="height:128px; width:128px; " alt="HTML5 " />
+            <div class="ph5 ">
+              <p class="orange ">attributes &gt;</p>
+              <p class="orange ">methods &gt;</p>
+              <span class="white ">&lt; custom events</span>
+            </div>
+            <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
+          </div>
+        </div>
+        <pre>
+          <code>
+            document.querySelector('web-component').addEventListener('eventName', () => {})
+          </code>
+        </pre>
+        <pre class="ma0 pa0 ">
+            <code>
+              import { Event, EventEmitter } from '@stencil/core';
+              ...
+              export class WebComponent {
+              
+                @Event() eventName: EventEmitter;
+              
+                ...
+                this.eventName.emit({});              
+              }
+            </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2 class="pb2 ">
+          💬 Between Stencil components</h2>
+        <div class="flex ">
+          <div class="w-100 flex justify-center items-center ">
+            <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
+            <div class="ph5 ">
+              <p class="white nowrap ">props &gt;</p>
+              <p class="white nowrap ">context &gt;</p>
+              <p class="white nowrap ">Redux, MobX, etc. &gt;</p>
+              <p class="white nowrap ">
+                <a href="https://github.com/ionic-team/stencil-state-tunnel ">Stencil State Tunnel</a> &gt;</p>
+            </div>
+            <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
+          </div>
+        </div>
+        <div class="b mt5 ">With the benefit of type safety!</div>
+      </section>
+
+      <section>
+        <h2>
+          ⚠️ Is this a framework?</h2>
+        <div>To ensure every Stencil component can be used as a web component should you support props and custom events?</div>
+        <pre class="w-90 center">
+            <code>
+                &lt;stencil-component buttonClick={this.handleButtonClick} />
+            </code>
+          </pre>
+        <pre class="w-90 center">
+          <code>
+            @Event() clicked: EventEmitter;  
+            @Prop() buttonClick: Function;
+            
+            handleClick = () => {
+              this.clicked.emit();
+              if (this.buttonClick !== undefined){
+                this.buttonClick();
+              }
+            }            
+          </code>
+        </pre>
+        <div>
+          <a href="https://github.com/jagreehal/react-stencil-wrapper ">React Stencil Wrapper</a> - passes props from React to Stencil components
+        </div>
+      </section>
+
+      <section>
+        <h2>
+          <img class="v-top " src="images/html5.png " style="height:64px; width:64px; " alt="Stencil " /> Stencil Apps</h2>
+        <ul>
+          <li>
+            Progressive Web Apps
+          </li>
+          <li>
+            Service worker via Workbox
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>
+          🔥 Is it (blazing) fast?</h2>
+        <a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a>
+        <img class="mw7 center mt2" src="images/stencil-fast.png " alt="Blazing fast " />
+        <div class="mt5">Similar performance to 'full' frameworks</div>
+
+      </section>
+
+      <section>
+        <h2>
+          🚧 Not perfect</h2>
+        <ul>
+          <li>
+            No source maps yet
+          </li>
+          <li>
+            Can't use just a single component
+          </li>
+          <li>
+            Some polyfills not 100% - shadow dom in Firefox
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>
+          😌 Thanks</h2>
+        <ul>
+          <li>
+            So web components are
+            <span class="strike "> the future</span> ready to use now
+          </li>
+          <li>
+            They work
+            <span class="hot-pink">with</span> existing solutions
+          </li>
+          <li>
+            Perfect for design systems as you only download what you use!
+          </li>
+          <li>
+            Questions?
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js "></script>
+  <script src="js/reveal.js "></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: false,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+          src: 'lib/js/classList.js',
+          condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/markdown/marked.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'plugin/markdown/markdown.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: 'plugin/search/search.js',
+          async: true
+        },
+        {
+          src: 'plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        }
+      ]
+    });
+  </script>
+
+</body>
+
+</html>

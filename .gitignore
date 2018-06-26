@@ -1,0 +1,23 @@
+*~
+*.sw[mnpcod]
+*.log
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+
+.idea/
+.sass-cache/
+.versions/
+node_modules/
+
+**/dist/
+**/www/build/
+
+# submodule packages
+/compiler
+/server
+/sys
+/testing
