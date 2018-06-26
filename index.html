@@ -185,7 +185,8 @@
 
   @Component({
     tag: 'my-first-component',
-    styleUrl: 'my-first-component.scss'
+    styleUrl: 'my-first-component.scss',
+    shadow: true
   })
   export class MyComponent {
   
@@ -257,6 +258,30 @@
             </code>
           </pre>
         </section>
+        <section>
+          <h2>
+            🔌 Using a Stencil Component</h2>
+          <pre class="w-90 center">
+              <code>
+  &lt!DOCTYPE html>
+  &lthtml dir="ltr" lang="en">
+  
+  &lthead>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Alert Component Starter</title>
+    <script src="/build/alert-component.js"></script>
+  &lt/head>
+  
+  &ltbody>
+    <alert-component-themes initial-value="2" alert-number="4">
+    </alert-component-themes>
+  &lt/body>
+  
+  &lt/html>    
+              </code>
+            </pre>
+        </section>
       </section>
 
       <section>
@@ -265,7 +290,7 @@
         <ul>
           <li>Polymer, Skate, Vue, Svelte and others can do the same thing</li>
           <li>Except they don't... IE11, size, testing, performance, config, dependencies...</li>
-          <li>...and rely on
+          <li>...and you have to add
             <span class="yellow ">that</span> polyfill</li>
         </ul>
       </section>
@@ -291,6 +316,7 @@
             </li>
             <li>Auto generate component docs</li>
             <li>Server Side Rendering</li>
+            <li>Autoprefixer</li>
             <li>Plugins - official router, Sass, PostCSS</li>
             <li>
               and...</li>
