@@ -81,13 +81,14 @@
           <li>Global tech company with over 6000 employees</li>
           <li>Legacy and greenfield web projects</li>
           <li>Lots of different JS and CSS libraries and frameworks</li>
-          <li>Very little reuse or consistency</li>
           <li>Difficult to make things work together</li>
+          <li>Very little reuse</li>
+          <li>Very little consistency e.g. many variations of the 'same' button</li>
         </ul>
       </section>
 
       <section>
-        <h2>❤️ web components</h2>
+        <h2>Now I ❤️ web components</h2>
         <ul>
           <li>Work
             <span class="hot-pink">WITH</span> other JS libraries and frameworks</li>
@@ -101,15 +102,15 @@
 
       <section class="justify-center">
         <blockquote>
-          We created for design system using web components!
+          We created a design system using web components!
         </blockquote>
       </section>
 
       <section>
         <h2>
-          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Stencil</h2>
+          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> About Stencil</h2>
         <ul>
-          <li>Developed by the Ionic team</li>
+          <li>Developed by the Ionic team in 2017</li>
           <li>Compiler with minimal framework</li>
           <li>Two outputs - components and PWA</li>
           <li>Small API</li>
@@ -120,9 +121,9 @@
 
       <section>
         <h2>
-          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Stencil</h2>
+          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Stencil is</h2>
         <ul>
-          <li> Mix of Angular, React and Vue
+          <li>A mix of React, Angular and Vue
             <div class="flex mt4 w-100 ">
               <ul class="w-50 ">
                 <li>JSX</li>
@@ -154,25 +155,25 @@
         <section>
           <h2>
             🏁 Getting started</h2>
-          <pre class="ma0 pa0">
+          <pre class="ma0 pa0 w-50 center">
             <code>
-              npm init stencil
+  npm init stencil
             </code>            
           </pre>
-          <img class="mw7 center" src="images/init.gif" alt="npm init stencil" />
+          <img class="w-50 center" src="images/init.gif" alt="npm init stencil" />
         </section>
         <section>
           <h2>📋 Minimal dependencies</h2>
           <pre class="w-50 center">
             <code>
-              ...
-              "dependencies": {},
-              "devDependencies": {
-                "@stencil/core": "^0.9.11",
-                "@types/jest": "^23.1.1",
-                "jest": "^23.2.0"
-              }
-              ...
+  ...
+  "dependencies": {},
+  "devDependencies": {
+    "@stencil/core": "^0.9.11",
+    "@types/jest": "^23.1.1",
+    "jest": "^23.2.0"
+  }
+  ...
             </code>
           </pre>
         </section>
@@ -180,25 +181,25 @@
           <h2>📋 Component Metadata</h2>
           <pre class="center w-90">
               <code>
-                  import { Component, Prop } from '@stencil/core';
+  import { Component, Prop } from '@stencil/core';
 
-                  @Component({
-                    tag: 'my-first-component',
-                    styleUrl: 'my-first-component.scss'
-                  })
-                  export class MyComponent {
-                  
-                    // Indicate that name should be a public property on the component
-                    @Prop() name: string;
-                  
-                    render() {
-                      return (
-                        <p>
-                          My name is {this.name}
-                        </p>
-                      );
-                    }
-                  }
+  @Component({
+    tag: 'my-first-component',
+    styleUrl: 'my-first-component.scss'
+  })
+  export class MyComponent {
+  
+    // Indicate that name should be a public property on the component
+    @Prop() name: string;
+  
+    render() {
+      return (
+        <p>
+          My name is {this.name}
+        </p>
+      );
+    }
+  }
               </code>
             </pre>
         </section>
@@ -237,22 +238,22 @@
             🔨 Testing</h2>
           <pre class="w-90 center">
             <code>
-              describe('rendering', () => {
-                let element;
-                let window;
-            
-                beforeEach(async () => {
-                  window = new TestWindow();
-                  element = await window.load({
-                    components: [AlertComponentStart],
-                    html: '<alert-component-start></alert-component-start>'
-                  });
-                });
-            
-                it('should be able to render the component with default value', async () => {
-                  expect(element.querySelector('.current').textContent).toEqual('5');
-                });
-              });
+  describe('rendering', () => {
+    let element;
+    let window;
+
+    beforeEach(async () => {
+      window = new TestWindow();
+      element = await window.load({
+        components: [AlertComponentStart],
+        html: '<alert-component-start></alert-component-start>'
+      });
+    });
+
+    it('should be able to render the component with default value', async () => {
+      expect(element.querySelector('.current').textContent).toEqual('5');
+    });
+  });
             </code>
           </pre>
         </section>
@@ -271,7 +272,7 @@
 
       <section>
         <section class="justify-center ">
-          <h1>Stencil in one gif...</h1>
+          <h1>Stencil keeps things simple a bit like Indy...</h1>
         </section>
 
         <section class="justify-center ">
@@ -285,8 +286,10 @@
           <h2>
             🎁 what you get out of the box</h2>
           <ul>
-            <li>Pre-rendered components</li>
-            <li>Auto generated component docs</li>
+            <li>Pre-rendered components - Faster time to
+              <a hred="https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint">first meaningful paint</a>
+            </li>
+            <li>Auto generate component docs</li>
             <li>Server Side Rendering</li>
             <li>Plugins - official router, Sass, PostCSS</li>
             <li>
@@ -312,9 +315,9 @@
             <img class="w-50" src="images/bundling.png " />
             <pre class="w-50 center">
             <code>
-              <big-box>
-                <little-box></little-box>
-              </big-box>
+  <big-box>
+    &lt;little-box/>
+  </big-box>
             </code>
           </pre>
 
@@ -337,22 +340,22 @@
             <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
           </div>
         </div>
-        <pre>
+        <pre class="w-50 center">
           <code>
-            document.querySelector('web-component').addEventListener('eventName', () => {})
+  document.querySelector('web-component').addEventListener('eventName', () => {})
           </code>
         </pre>
-        <pre class="ma0 pa0 ">
+        <pre class="w-50 center">
             <code>
-              import { Event, EventEmitter } from '@stencil/core';
-              ...
-              export class WebComponent {
-              
-                @Event() eventName: EventEmitter;
-              
-                ...
-                this.eventName.emit({});              
-              }
+  import { Event, EventEmitter } from '@stencil/core';
+  ...
+  export class WebComponent {
+  
+    @Event() eventName: EventEmitter;
+  
+    ...
+    this.eventName.emit({});              
+  }
             </code>
         </pre>
       </section>
@@ -364,6 +367,7 @@
           <div class="w-100 flex justify-center items-center ">
             <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
             <div class="ph5 ">
+              <p class="white nowrap ">&lt; custom events</p>
               <p class="white nowrap ">props &gt;</p>
               <p class="white nowrap ">context &gt;</p>
               <p class="white nowrap ">Redux, MobX, etc. &gt;</p>
@@ -373,29 +377,29 @@
             <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
           </div>
         </div>
-        <div class="b mt5 ">With the benefit of type safety!</div>
+        <div class="b mt5 ">With Typescript providing type safety!</div>
       </section>
 
       <section>
         <h2>
           ⚠️ Is this a framework?</h2>
         <div>To ensure every Stencil component can be used as a web component should you support props and custom events?</div>
-        <pre class="w-90 center">
+        <pre class="w-60 center">
             <code>
-                &lt;stencil-component buttonClick={this.handleButtonClick} />
+  &lt;button-component buttonClick={this.handleButtonClick} />
             </code>
           </pre>
-        <pre class="w-90 center">
+        <pre class="w-60 center">
           <code>
-            @Event() clicked: EventEmitter;  
-            @Prop() buttonClick: Function;
-            
-            handleClick = () => {
-              this.clicked.emit();
-              if (this.buttonClick !== undefined){
-                this.buttonClick();
-              }
-            }            
+  @Event() clicked: EventEmitter;  
+  @Prop() buttonClick: Function;
+  
+  handleClick = () => {
+    this.clicked.emit();
+    if (this.buttonClick !== undefined){
+      this.buttonClick();
+    }
+  }            
           </code>
         </pre>
         <div>
@@ -404,25 +408,27 @@
       </section>
 
       <section>
-        <h2>
-          <img class="v-top " src="images/html5.png " style="height:64px; width:64px; " alt="Stencil " /> Stencil Apps</h2>
-        <ul>
-          <li>
-            Progressive Web Apps
-          </li>
-          <li>
-            Service worker via Workbox
-          </li>
-        </ul>
-      </section>
+        <section>
+          <h2>
+            <img class="v-top " src="images/html5.png " style="height:64px; width:64px; " alt="Stencil " /> Stencil Apps</h2>
+          <ul>
+            <li>
+              Progressive Web Apps
+            </li>
+            <li>
+              Service worker via Workbox
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>
-          🔥 Is it (blazing) fast?</h2>
-        <a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a>
-        <img class="mw7 center mt2" src="images/stencil-fast.png " alt="Blazing fast " />
-        <div class="mt5">Similar performance to 'full' frameworks</div>
+        <section>
+          <h2>
+            🔥 Are they (blazing) fast?</h2>
+          <a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a>
+          <img class="mw7 center mt2" src="images/stencil-fast.png " alt="Blazing fast " />
+          <div class="mt5">Similar performance to 'full' frameworks</div>
 
+        </section>
       </section>
 
       <section>
@@ -454,7 +460,7 @@
             <span class="hot-pink">with</span> existing solutions
           </li>
           <li>
-            Perfect for design systems as you only download what you use!
+            Perfect for design systems as you only download components that you need!
           </li>
           <li>
             Questions?
