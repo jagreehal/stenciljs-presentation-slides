@@ -60,7 +60,12 @@
         <ul>
           <li>Started contract in May 2017</li>
           <li>Vanilla web components</li>
-          <li>Horrible dev experience</li>
+          <li>Horrible dev experience
+            <ul class="mt3">
+              <li>So much boilerplate</li>
+              <li>Web Component Tester required Java</li>
+            </ul>
+          </li>
           <li>Web Component Polyfill (anything but light)</li>
         </ul>
       </section>
@@ -259,7 +264,7 @@
         <section>
           <h2>
             🔌 Using a Stencil Component</h2>
-          <pre class="w-90 center">
+          <pre class="w-80 center">
               <code>
   &lt!DOCTYPE html>
   &lthtml dir="ltr" lang="en">
@@ -268,7 +273,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <title>Stencil Alert Component Starter</title>
-    &lt;script src="/build/alert-component.js"></script>
+    &lt;script src="/build/your-companies-components.js"></script>
   &lt/head>
   
   &ltbody>
@@ -312,7 +317,7 @@
             <li>Pre-rendered components - Faster time to
               <a hred="https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint">first meaningful paint</a>
             </li>
-            <li>Auto generate component docs</li>
+            <li>Auto generated component docs</li>
             <li>Server Side Rendering</li>
             <li>Autoprefixer</li>
             <li>Plugins - official router, Sass, PostCSS</li>
@@ -410,18 +415,18 @@
         <div>To ensure every Stencil component can be used as a web component should you support props and custom events?</div>
         <pre class="w-60 center">
             <code>
-  &lt;button-component buttonClick={this.handleButtonClick} />
+  &lt;button-component buttonClicked={this.handleButtonClicked} />
             </code>
           </pre>
         <pre class="w-60 center">
           <code>
   @Event() clicked: EventEmitter;  
-  @Prop() buttonClick: Function;
+  @Prop() buttonClicked: Function;
   
   handleClick = () => {
     this.clicked.emit();
-    if (this.buttonClick !== undefined){
-      this.buttonClick();
+    if (this.buttonClicked !== undefined){
+      this.buttonClicked();
     }
   }            
           </code>
