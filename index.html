@@ -76,14 +76,14 @@
       </section>
 
       <section>
-        <h2>🔥 the situation</h2>
+        <h2>💰 the situation</h2>
         <ul>
           <li>Global tech company with over 6000 employees</li>
           <li>Legacy and greenfield web projects</li>
           <li>Lots of different JS and CSS libraries and frameworks</li>
           <li>Difficult to make things work together</li>
-          <li>Very little reuse</li>
-          <li>Very little consistency e.g. many variations of the 'same' button</li>
+          <li>Very little reuse or consistency</li>
+          <li>High cost of change</li>
         </ul>
       </section>
 
@@ -108,7 +108,7 @@
 
       <section>
         <h2>
-          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> About Stencil</h2>
+          <img class="v-top" src="images/stencil.ico" style="height:64px; width:64px;" alt="Stencil" /> About Stencil</h2>
         <ul>
           <li>Developed by the Ionic team in 2017</li>
           <li>Compiler with minimal framework</li>
@@ -121,18 +121,18 @@
 
       <section>
         <h2>
-          <img class="v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Stencil is</h2>
+          <img class="v-top" src="images/stencil.ico" style="height:64px; width:64px;" alt="Stencil" /> Stencil is</h2>
         <ul>
           <li>A mix of React, Angular and Vue
-            <div class="flex mt4 w-100 ">
-              <ul class="w-50 ">
+            <div class="flex mt4 w-100">
+              <ul class="w-50">
                 <li>JSX</li>
                 <li>Virtual DOM</li>
                 <li>Reactive</li>
                 <li>Typescript</li>
                 <li>Decorators</li>
               </ul>
-              <ul class="w-50 ">
+              <ul class="w-50">
                 <li>Life cycle hooks</li>
                 <li>Context</li>
                 <li>Async rendering</li>
@@ -147,7 +147,7 @@
       <section>
         <section>
           <h2>
-            <img class=" v-top " src="images/stencil.ico " style="height:64px; width:64px; " alt="Stencil " /> Building Components</h2>
+            <img class=" v-top" src="images/stencil.ico" style="height:64px; width:64px;" alt="Stencil" /> Building Components</h2>
           <div>I've created a 12 step tutorial of how to create a Stencil component from scratch</div>
           <img class="mw7 ma3 center" src="images/alert-component.png" alt="alert-component" />
           <a href="https://github.com/jagreehal/jag-reehal-stencil-tutorial">Stencil Tutorial created by Jag Reehal</a>
@@ -167,11 +167,11 @@
           <pre class="w-50 center">
             <code>
   ...
-  "dependencies": {},
-  "devDependencies": {
-    "@stencil/core": "^0.9.11",
-    "@types/jest": "^23.1.1",
-    "jest": "^23.2.0"
+ "dependencies": {},
+ "devDependencies": {
+   "@stencil/core":"^0.9.11",
+   "@types/jest":"^23.1.1",
+   "jest":"^23.2.0"
   }
   ...
             </code>
@@ -231,7 +231,7 @@
 } 
             </code>
           </pre>
-            <img class="mw6 mt3" src="images/theme-example.png " alt="theme example " />
+            <img class="mw6 mt3" src="images/theme-example.png" alt="theme example" />
           </div>
         </section>
         <section>
@@ -291,20 +291,20 @@
           <li>Polymer, Skate, Vue, Svelte and others can do the same thing</li>
           <li>Except they don't... IE11, size, testing, performance, config, dependencies...</li>
           <li>...and you have to add
-            <span class="yellow ">that</span> polyfill</li>
+            <span class="yellow">that</span> polyfill</li>
         </ul>
       </section>
 
       <section>
-        <section class="justify-center ">
+        <section class="justify-center">
           <h1>Stencil keeps things simple a bit like Indy...</h1>
         </section>
 
-        <section class="justify-center ">
-          <iframe src="https://giphy.com/embed/kUkCMSni7NBoQ " width="100% " height="100% " style="position:absolute
-                  " frameBorder="0 " class="giphy-embed " allowFullScreen></iframe>
+        <section class="justify-center">
+          <iframe src="https://giphy.com/embed/kUkCMSni7NBoQ" width="100%" height="100%" style="position:absolute
+                 " frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
           <p>
-            <a href="https://giphy.com/gifs/kUkCMSni7NBoQ ">via GIPHY</a>
+            <a href="https://giphy.com/gifs/kUkCMSni7NBoQ">via GIPHY</a>
           </p>
         </section>
         <section>
@@ -326,11 +326,11 @@
         <section>
           <h2>
             🏥 Dynamic polyfills</h2>
-          <div class="flex flex-column center ">
+          <div class="flex flex-column center">
             <div>Chrome - smaller ployfill + ES6 modules</div>
-            <img class="w-50 center" src="images/chrome-loading.png " />
-            <div class="mt5 ">Firefox - larger polyfill + ES5 </div>
-            <img class="w-50 center" src="images/firefox-loading.png " />
+            <img class="w-50 center" src="images/chrome-loading.png" />
+            <div class="mt5">Firefox - larger polyfill + ES5 </div>
+            <img class="w-50 center" src="images/firefox-loading.png" />
           </div>
         </section>
 
@@ -338,7 +338,7 @@
           <h2>
             🏭 Bundling</h2>
           <div>
-            <img class="w-50" src="images/bundling.png " />
+            <img class="w-50" src="images/bundling.png" />
             <pre class="w-50 center">
             <code>
   <big-box>
@@ -355,15 +355,16 @@
       <section>
         <h2>
           💬 Custom Events</h2>
-        <div class="flex ">
-          <div class="w-100 flex justify-center items-center ">
-            <img class="v-top " src="images/html5.png " style="height:128px; width:128px; " alt="HTML5 " />
-            <div class="ph2 ">
-              <p class="orange ">attributes &gt;</p>
-              <p class="orange ">methods &gt;</p>
-              <span class="white ">&lt; custom events</span>
+        <div class="flex">
+          <div class="w-100 flex justify-center items-center">
+            <img class="v-top" src="images/html5.png" style="height:128px; width:128px;" alt="HTML5" />
+            <div class="ph2">
+              <p class="orange">events &gt;</p>
+              <p class="orange">attributes &gt;</p>
+              <p class="orange">methods &gt;</p>
+              <span class="white">&lt; custom events</span>
             </div>
-            <img class="v-top" src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
+            <img class="v-top" src="images/stencil.ico" style="height:128px; width:128px;" alt="Stencil" />
           </div>
         </div>
         <pre class="w-50 center">
@@ -378,7 +379,6 @@
   export class WebComponent {
   
     @Event() eventName: EventEmitter;
-  
     ...
     this.eventName.emit({});              
   }
@@ -387,23 +387,23 @@
       </section>
 
       <section>
-        <h2 class="pb2 ">
+        <h2 class="pb2">
           💬 Between Stencil components</h2>
-        <div class="flex ">
-          <div class="w-100 flex justify-center items-center ">
-            <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
-            <div class="ph5 ">
-              <p class="white nowrap ">&lt; custom events</p>
-              <p class="white nowrap ">props &gt;</p>
-              <p class="white nowrap ">context &gt;</p>
-              <p class="white nowrap ">Redux, MobX, etc. &gt;</p>
-              <p class="white nowrap ">
-                <a href="https://github.com/ionic-team/stencil-state-tunnel ">Stencil State Tunnel</a> &gt;</p>
+        <div class="flex">
+          <div class="w-100 flex justify-center items-center">
+            <img class="v-top" src="images/stencil.ico" style="height:128px; width:128px;" alt="Stencil" />
+            <div class="ph5">
+              <p class="white nowrap">&lt; custom events</p>
+              <p class="white nowrap">props &gt;</p>
+              <p class="white nowrap">context &gt;</p>
+              <p class="white nowrap">Redux, MobX, etc. &gt;</p>
+              <p class="white nowrap">
+                <a href="https://github.com/ionic-team/stencil-state-tunnel">Stencil State Tunnel</a> &gt;</p>
             </div>
-            <img class="v-top " src="images/stencil.ico " style="height:128px; width:128px; " alt="Stencil " />
+            <img class="v-top" src="images/stencil.ico" style="height:128px; width:128px;" alt="Stencil" />
           </div>
         </div>
-        <div class="b mt5 ">With Typescript providing type safety!</div>
+        <div class="b mt5">With Typescript providing type safety!</div>
       </section>
 
       <section>
@@ -429,14 +429,14 @@
           </code>
         </pre>
         <div>
-          <a href="https://github.com/jagreehal/react-stencil-wrapper ">React Stencil Wrapper</a> - passes props from React to Stencil components
+          <a href="https://github.com/jagreehal/react-stencil-wrapper">React Stencil Wrapper</a> - passes props from React to Stencil components
         </div>
       </section>
 
       <section>
         <section>
           <h2>
-            <img class="v-top " src="images/html5.png " style="height:64px; width:64px; " alt="Stencil " /> Stencil Apps</h2>
+            <img class="v-top" src="images/html5.png" style="height:64px; width:64px;" alt="Stencil" /> Stencil Apps</h2>
           <ul>
             <li>
               Progressive Web Apps
@@ -451,7 +451,7 @@
           <h2>
             🔥 Are they (blazing) fast?</h2>
           <a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a>
-          <img class="mw7 center mt2" src="images/stencil-fast.png " alt="Blazing fast " />
+          <img class="mw7 center mt2" src="images/stencil-fast.png" alt="Blazing fast" />
           <div class="mt5">Similar performance to 'full' frameworks</div>
 
         </section>
@@ -470,6 +470,12 @@
           <li>
             Some polyfills not 100% - shadow dom in Firefox
           </li>
+          <li>
+            Can't namespace components
+          </li>
+          <li>
+            But getting better!
+          </li>
         </ul>
       </section>
 
@@ -479,7 +485,7 @@
         <ul>
           <li>
             So web components are
-            <span class="strike "> the future</span> ready to use now
+            <span class="strike"> the future</span> ready to use now
           </li>
           <li>
             They work
@@ -498,8 +504,8 @@
 
   </div>
 
-  <script src="lib/js/head.min.js "></script>
-  <script src="js/reveal.js "></script>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
   <script>
     // More info https://github.com/hakimel/reveal.js#configuration
